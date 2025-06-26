@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa; /* Light blue theme */
+    color: #333;
+    padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Make it full width on smaller screens */
+    max-width: 400px; /* Max width for larger screens */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #007bb5; /* Darker blue for heading */
+    margin-bottom: 25px;
+    font-size: 1.8em; /* Adjust font size for responsiveness */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b3e5fc; /* Light blue border */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00bcd4; /* Cyan blue for buttons */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%; /* Full width for buttons on smaller screens */
+    max-width: 250px; /* Limit button width on larger screens */
+}
+
+button:hover {
+    background-color: #0097a7; /* Darker cyan on hover */
+}
+
+.otp-display, .otp-verification {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #4fc3f7; /* Dashed light blue border */
+    border-radius: 8px;
+    background-color: #e1f5fe; /* Lighter blue background */
+}
+
+.otp-display input[type="text"] {
+    font-weight: bold;
+    color: #007bb5;
+    text-align: center;
+    background-color: #f0f8ff; /* Very light blue background for generated OTP */
+}
+
+#entered-otp {
+    text-align: center;
+}
+
+/* Popup Styles */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    z-index: 1000; /* Ensure popup is on top */
+}
+
+.popup-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 350px;
+    width: 90%; /* Responsive width */
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.popup-container.show .popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.popup-content p {
+    font-size: 1.1em; /* Responsive font size */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.popup-content button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: auto; /* Allow popup button to size naturally */
+    max-width: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .popup-content {
+        padding: 20px;
+    }
+    .popup-content p {
+        font-size: 1em;
+    }
+}
