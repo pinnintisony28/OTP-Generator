@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <link rel="stylesheet" href="styleotp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Generator</h1>
+        
+        <div id="otp-section">
+            <button id="generate-otp-button">Generate OTP</button>
+            <div class="otp-display">
+                <label for="generated-otp">Generated OTP:</label>
+                <input type="text" id="generated-otp" readonly>
+            </div>
+            <div class="otp-verification">
+                <label for="entered-otp">Enter OTP:</label>
+                <input type="text" id="entered-otp" maxlength="6" placeholder="Enter the OTP">
+                <button id="verify-otp-button">Verify OTP</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script src="scriptotp.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
