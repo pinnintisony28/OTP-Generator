@@ -30,13 +30,7 @@ This is a simple and interactive **OTP (One-Time Password) Generator** built usi
 - CSS
 - JavaScript
 
----
 
-## 📷 Screenshots
-
-> Add screenshots here (optional)  
-> Example:  
-> ![OTP Generator Screenshot](screenshot.png)
 
 ---
 
